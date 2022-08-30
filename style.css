@@ -173,7 +173,7 @@ nav a {
   font-weight: 700;
 }
 
-input {
+.search-input {
   padding: 0.5rem 1.2rem;
   border-radius: 2rem;
   border: none;
@@ -252,26 +252,21 @@ nav i {
 
 article {
   display: flex;
-  justify-content: space-around;
+  column-gap: 3rem;
   align-items: center;
   background-color: white;
   padding: 3rem 1rem;
 }
 
 .blog_picture img {
-    width: 100%;
+  width: 100%;
 }
 
 .pic2 img {
-    width: 320px;
-}
-
-.pic3 img {
-    width: 320px;
+  width: 320px;
 }
 
 .python_blog {
-  /* margin-top: 2rem; */
   color: var(--blog-text);
 }
 
@@ -284,11 +279,11 @@ article {
 .publish {
   display: flex;
   column-gap: 2rem;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
 }
 
 .python_blog p {
-  margin: 3rem 0 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 .python_blog a {
@@ -318,20 +313,61 @@ article {
   opacity: 1;
 }
 
-/* .python_blog a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: var(--dark-blue);
-  position: absolute;
-  bottom: -3px;
-  right: 0;
-  transition: all 0.5s ease;
+.section3 {
+  background-color: var(--very-dark-blue);
+  padding: 3rem 0;
 }
 
-.python_blog a:hover::after {
-  width: 100%;
-} */
+.newsletter_container {
+  position: relative;
+  width: 425px;
+  margin: 0 auto;
+}
+
+.newsletter_header {
+  color: white;
+  margin: 0;
+}
+
+.section3 {
+  /* display: flex;
+  justify-content: center; */
+}
+
+.newsletter_text p {
+  color: white;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.newsletter_input-subscribe {
+  text-align: center;
+}
+
+.newsletter_input-subscribe input {
+  padding: .5rem 1rem;
+  border: none;
+}
+
+.subscribe_btn {
+  position: absolute;
+  top: 81%;
+  left: 70%;
+}
+
+.subscribe_btn button {
+  background-color: var(--dark-blue);
+  padding: 0.55rem 1rem;
+  border: none;
+  color: white;
+}
+
+
+
+
+
+
+
 
 
 
@@ -355,10 +391,38 @@ article {
 
 
 @media (max-width: 1024px) {
-    article {
-        flex-direction: column;
-    }
+  article {
+    flex-direction: column;
+  }
+  .publish {
+    justify-content: center;
+  }
+  .python_blog p {
+    text-align: center;
+  }
+  .python_blog a {
+    text-align: center;
+  }
+  .read {
+    text-align: center;
+  }
+  .python_blog h3 {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
+
+/* @media (max-width: 981px) {
+  .subscribe_btn {
+    top: 80%;
+  }
+}
+
+@media (max-width: 790px) {
+  .subscribe_btn {
+    top: 83%;
+  }
+} */
 
 @media (max-width: 768px) {
   main {
@@ -381,6 +445,28 @@ article {
   .tag {
     width: 90%;
     margin: 3rem auto 0;
+  }
+  .python_blog a p {
+    text-align: center;
+  }
+  .read {
+    text-align: center;
+  }
+  .section3 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .newsletter_container {
+    width: 90%;
+  }
+  /* .subscribe_btn {
+    top: 74%;
+  } */
+}
+
+@media (max-width: 425px) {
+  .pic2 img {
+    width: 100%;
   }
 }
 
