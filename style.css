@@ -21,6 +21,7 @@
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
+  --read-btn: #f1f3ff;
   --gray-dark: #343a40;
   --primary: #2a4b7c;
   --secondary: #202c45;
@@ -213,7 +214,7 @@ nav i {
 
 .item_overlay2 {
   position: relative;
-  top: 45%;
+  top: 25%;
 }
 
 .item_overlay h2 {
@@ -229,6 +230,28 @@ nav i {
   display: flex;
   justify-content: center;
   column-gap: 2rem;
+}
+
+.read {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.read button {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  color: var(--read-btn);
+  border: 1px solid var(--read-btn);
+  background-color: transparent;
+  transition: all 400ms ease;
+}
+
+.read button:hover {
+  color: #444;
+  background-color: var(--read-btn);
 }
 
 .swiper-button-prev,
@@ -572,6 +595,13 @@ form {
 }
 
 @media (max-width: 425px) {
+  .item_overlay2 {
+    bottom: 10% !important;
+    column-gap: 0rem;
+  }
+}
+
+@media (max-width: 425px) {
   .pic2 img {
     width: 100%;
   }
@@ -581,9 +611,12 @@ form {
   }
 }
 
-@media (max-width: 375px) {
-  
-}
+/* @media (max-width: 375px) {
+  .item_overlay2 {
+    position: relative;
+    top: 5% !important;
+  }
+} */
 
 @media (max-width: 320px) {
   .aside_image {
@@ -595,7 +628,13 @@ form {
     margin: 0 auto;
   }
   .item_overlay2 {
-    top: 0%;
+    top: 0% !important;
     column-gap: 0rem;
+  }
+  .item_overlay2 h2 {
+    padding-bottom: 0;
+  }
+  .read {
+    margin-top: 0;
   }
 }
