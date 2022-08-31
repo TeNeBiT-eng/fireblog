@@ -406,6 +406,7 @@ form {
   font-size: 24px;
   font-weight: 700;
   color: white;
+  text-align: center;
 }
 
 .section4 div ul li {
@@ -441,7 +442,7 @@ form {
 
 .section5 {
   background-color: var(--very-dark-blue);
-  padding: 2rem 4rem;
+  padding: 2rem 0rem;
 }
 
 .section5 {
@@ -611,13 +612,6 @@ form {
   }
 }
 
-/* @media (max-width: 375px) {
-  .item_overlay2 {
-    position: relative;
-    top: 5% !important;
-  }
-} */
-
 @media (max-width: 320px) {
   .aside_image {
     width: 100%;
@@ -636,5 +630,8 @@ form {
   }
   .read {
     margin-top: 0;
+  }
+  .subscribe_btn {
+    left: 70% !important;
   }
 }
