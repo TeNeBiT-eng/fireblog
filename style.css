@@ -232,12 +232,12 @@ nav i {
   column-gap: 2rem;
 }
 
-.read {
+.readMore {
   text-align: center;
   margin-top: 1rem;
 }
 
-.read button {
+.readMore button {
   padding: .5rem 1rem;
   font-size: 1.25rem;
   border: none;
@@ -249,7 +249,7 @@ nav i {
   transition: all 400ms ease;
 }
 
-.read button:hover {
+.readMore button:hover {
   color: #444;
   background-color: var(--read-btn);
 }
