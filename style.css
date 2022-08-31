@@ -221,6 +221,7 @@ nav i {
   font-weight: 700;
   text-align: center;
   color: white;
+  padding-bottom: 1rem;
 }
 
 .text_overlay {
@@ -481,6 +482,9 @@ form {
   .subscribe_btn {
     left: 55%;
   }
+  article {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 2560px) {
@@ -571,6 +575,14 @@ form {
   .pic2 img {
     width: 100%;
   }
+  .item_overlay2 {
+    top: 25% !important;
+    column-gap: 0rem;
+  }
+}
+
+@media (max-width: 375px) {
+  
 }
 
 @media (max-width: 320px) {
@@ -581,5 +593,9 @@ form {
   .aside_right {
     width: 90%;
     margin: 0 auto;
+  }
+  .item_overlay2 {
+    top: 0%;
+    column-gap: 0rem;
   }
 }
