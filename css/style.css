@@ -137,6 +137,7 @@ h1 {
   border: none;
   background-color: var(--dark-blue);
   transition: all 200ms ease;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -320,6 +321,10 @@ article {
   font-size: 1.2rem;
 }
 
+.python_blog a:hover {
+  color: var(--very-dark-blue);
+}
+
 .python_blog a::before {
   content: "";
   width: 0;
@@ -329,7 +334,7 @@ article {
   top: 100%;
   left: 0;
   transition: all 0.4s ease;
-  background-color: var(--dark-blue);
+  background-color: var(--very-dark-blue);
 }
 .python_blog a:hover::before {
   width: 100%;
@@ -382,6 +387,7 @@ form {
   padding: 0.5rem 0.15rem;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .page {
@@ -422,6 +428,10 @@ form {
   position: relative;
 }
 
+.section4 div ul li a:hover {
+  color: var(--very-dark-blue);
+}
+
 .section4 div ul li a::before {
   content: "";
   width: 0;
@@ -431,7 +441,7 @@ form {
   top: 100%;
   left: 0;
   transition: all 0.4s ease;
-  background-color: var(--dark-blue);
+  background-color: var(--very-dark-blue);
 }
 .section4 div ul li a:hover::before {
   width: 100%;
@@ -440,16 +450,14 @@ form {
 
 /* ========== SECTION4 ========== */
 
-.section5 {
+footer {
   background-color: var(--very-dark-blue);
   padding: 2rem 0rem;
-}
-
-.section5 {
   text-align: center;
+  margin-top: 1rem;
 }
 
-.section5 p {
+footer p {
   padding: .5rem;
 }
 
@@ -457,7 +465,7 @@ form {
   color: var(--warning);
 }
 
-.section5 .feed a:hover {
+footer .feed a:hover {
   text-decoration: underline;
   text-decoration-color: var(--warning);
 }

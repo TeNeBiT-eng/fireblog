@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Craziest Dict Expression in the West</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/post1.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <main>
+      <aside class="aside_left">
+        <div class="aside_image">
+          <img src="./image/kateglover.jpg" alt="" />
+        </div>
+        <h1>Kate Glover</h1>
+        <div class="aside_social-media">
+          <a href="#" class="link_btn link_btn-outline"
+            ><i class="uil uil-twitter"></i
+          ></a>
+          <a href="#" class="link_btn link_btn-outline"
+            ><i class="uil uil-facebook-f"></i
+          ></a>
+          <a href="#" class="link_btn link_btn-outline"
+            ><i class="uil uil-linkedin-alt"></i
+          ></a>
+          <a href="#" class="link_btn link_btn-outline"
+            ><i class="uil uil-instagram"></i
+          ></a>
+        </div>
+
+        <div class="talk_btn">
+          <button class="btn btn2"><a href="">Talk to me</a></button>
+        </div>
+      </aside>
+      <!------------ ASIDE LEFT ENDS ------------>
+
+      <aside class="aside_right">
+        <div class="right_sidebar">
+          <nav>
+            <a href="index.html">Fireblog</a>
+            <input class="search-input" type="search" placeholder="Search" />
+            <i class="uil uil-search"></i>
+          </nav>
+        </div>
+
+        <section class="">
+          <header>
+            <h1>The Craziest Dict Expression in the West</h1>
+            <div><a href="index.html">Home</a></div>
+          </header>
+
+          <div class="blog">
+            <div class="blog_img-container">
+              <img src="./image/codePython.png" alt="" />
+            </div>
+
+            <h2>Find out how crazy python dictionaries can really be.</h2>
+
+            <div class="publish">
+              <small><i class="uil uil-schedule"></i>Aug. 20, 2022, 8:53 p.m.</small>
+            </div>
+
+            <div class="blog_content-container">
+              <p class="blog_content">
+                Sometimes you strike upon a tiny code example that has real
+                depth to it—a single line of code that can teach you a lot about
+                a programming language if you ponder it enough. Such a code
+                snippet feels like a Zen k┼ìan: a question or statement used in
+                Zen practice to provoke doubt and test the student’s progress.
+                The tiny little code snippet we’ll discuss in this chapter is
+                one such example. Upon first glance, it might seem like a
+                straightforward dictionary expression, but when considered at
+                close range, it takes you on a mind-expanding journey through
+                the CPython interpreter. I get such a kick out of this little
+                one-liner that at one point I had it printed on my Python
+                conference badges as a conversation starter. It also led to some
+                rewarding conversations with members of my Python newsletter. So
+                without further ado, here is the code snippet. Take a moment to
+                reflect on the following dictionary expression and what it will
+                evaluate to: >>> {True: 'yes', 1: 'no', 1.0: 'maybe'} I’ll wait
+                here… Ok, ready? This is the result we get when evaluating the
+                above dict expression in a CPython interpreter session: >>>
+                {True: 'yes', 1: 'no', 1.0: 'maybe'} {True: 'maybe'} I’ll admit
+                I was pretty surprised about this result the first time I saw
+                it. But it all makes sense when you investigate what happens,
+                stepby step. So, let’s think about why we get this—I want to say
+                slightly unintuitive—result. When Python processes our
+                dictionary expression, it first constructs a new empty
+                dictionary object; and then it assigns the keys and values to it
+                in the order given in the dict expression. Therefore, when we
+                break it down, our dict expression is equivalent to this
+                sequence of statements that are executed in order:
+              </p>
+              <code>
+                <p>>>> xs = dict()</p>
+                <p>>>> xs[True] = 'yes'</p>
+                <p>>>> xs[1] = 'no'</p>
+                <p>>>> xs[1.0] = 'maybe'</p>
+              </code>
+              <p>
+                Oddly enough, Python considers all dictionary keys used in this
+                example to be equal: Okay, but wait a minute here. I’m sure you
+                can intuitively accept that 1.0 == 1, but why would True be
+                considered equal to 1 as well? The first time I saw this
+                dictionary expression it really stumped me. After doing some
+                digging in the Python documentation, I learned that Python
+                treats bool as a subclass of int. This is the case in Python 2
+                and Python 3: “The Boolean type is a subtype of the integer
+                type, and Boolean values behave like the values 0 and 1,
+                respectively, in almost all contexts, the exception being that
+                when converted to a string, the strings ‘False’ or ‘True’ are
+                returned, respectively.”3.
+              </p>
+              <p class="continuation">....to be continued</p>
+            </div>
+          </div>
+
+          <h2>Similar posts</h2>
+          <p class="no_post">There are no similar posts yet.</p>
+        </section>
+
+        <section class="section4">
+          <div class="posts">
+            <div><h3>Latest posts</h3></div>
+            <div><h3>3 total posts</h3></div>
+          </div>
+
+          <div>
+            <ul>
+              <li>
+                <a class="text" href="post1.html"
+                  >The Craziest Dict Expression in the West</a
+                >
+              </li>
+              <li><a href="post2.html">Python Countdown Timer</a></li>
+              <li><a href="post3.html">Newton</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <footer>
+          <p class="feed"><a href="#">Subsribe to my RSS feed</a></p>
+          <p class="copyright">
+            &copy; <span>Fireblog</span>. All Rights Reserved. Designed by
+            <span>firebCorp</span>
+          </p>
+        </footer>
+      </aside>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
